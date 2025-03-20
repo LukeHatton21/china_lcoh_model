@@ -19,6 +19,8 @@
 220,Permanent snow and ice,Snow and ice,0,0
 190,Artificial surfaces and associated areas (urban areas >50%),Urban,0,1
 160,Closed (>40%) broadleaved forest regularly flooded - Fresh water,Water,0,1
-170,"Closed(>40%)broadleavedsemi-deciduousand/orevergreenforestregularlyflooded - Saline water",Water,0,1
-180,"Closed to open (>15%) vegetation (grassland, shrubland, woody vegetation) onregularly flooded or waterlogged soil - Fresh, brackish or saline water",Water,0,1
+170,"Closed(>40%)broadleavedsemi-deciduousand/orevergreenforestregularly
+flooded - Saline water",Water,0,1
+180,"Closed to open (>15%) vegetation (grassland, shrubland, woody vegetation) on
+regularly flooded or waterlogged soil - Fresh, brackish or saline water",Water,0,1
 210,Water bodies,Water,0,1
