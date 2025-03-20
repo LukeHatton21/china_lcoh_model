@@ -48,6 +48,11 @@ Third, decide on the model parameters that you wish to use, including:
 
 Fourth, run the hydrogen_model.py. I recommend that you save a different version for each model configuration run. Given the large volumes of data and the optimisation of electrolyser size on a location by location basis, it is very slow to run (e.g., 3 weeks for a year of data globally).
 
+## POSTPROCESSING
+
+Graph plotting functions and other postprocessing scripts (e.g., cost-supply curve generation, LCOH heatmaps) are included in the postprocessing folder. 
+
+
 ## LICENSE
 BSD 3-Clause License
 Copyright (C) 2023-2025  Luke Hatton
