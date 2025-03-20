@@ -36,8 +36,15 @@ Performing the LCOH model run is very computationally expensive and requires sub
 ## USAGE INSTRUCTIONS
 
 First, edit the paths in the hydrogen_model script and ensure that the input folders (DATA, MERRA2_INPUTS/WIND_CF/ and MERRA2_INPUTS/SOLAR_CF) are set up correctly.
-Second, ensure that all the required data files are in the DATA folder. Several files need to be downloaded and directly added, including: [ETOPO_bathymetry.nc](https://www.ncei.noaa.gov/products/etopo-global-relief-model) and [distance2shore.nc](https://catalog.data.gov/dataset/distance-to-nearest-coastline-0-04-degree-grid). Download and add to /DATA/
-Third, decide on the model parameters that you wish to use, including: fract_diff (difference in solar fraction being computed e.g., 0.25 to give results for 0% 25%, 50%, 75%...), elec_tech (PEM or Alkaline), optimisation (whether to optimise the electrolyser size), elec_capex (cost of the electrolyser in USD/kW) and num_cores (number of computing cores to use for the parallelisation) and latitude and longitude limits for the calculation
+Second, ensure that all the required data files are in the DATA folder. Several files need to be downloaded and directly added, including: 
+*[ETOPO_bathymetry.nc](https://www.ncei.noaa.gov/products/etopo-global-relief-model) 
+*[distance2shore.nc](https://catalog.data.gov/dataset/distance-to-nearest-coastline-0-04-degree-grid). 
+Download both and add to /DATA/
+Third, decide on the model parameters that you wish to use, including: 
+ * fract_diff (difference in solar fraction being computed e.g., 0.25 to give results for 0% 25%, 50%, 75%...)
+ * elec_tech (PEM or Alkaline), optimisation (whether to optimise the electrolyser size)
+ * elec_capex (cost of the electrolyser in USD/kW)
+ * num_cores (number of computing cores to use for the parallelisation) and latitude and longitude limits for the calculation
 Fourth, run the hydrogen_model.py. I recommend that you save a different version for each model configuration run. Given the large volumes of data, it is very slow to run (e.g., 3 weeks for a year of data globally).
 
 ## LICENSE
