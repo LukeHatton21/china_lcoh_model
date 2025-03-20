@@ -23,7 +23,7 @@ Required libraries:
 ## SETUP
 
 ### Generate and download renewable power profiles
-First, download the necessary input data from NASA's [MERRA-2 reanalysis](https:///gmao.gsfc.nasa.gov/reanalysis/MERRA-2/), including windspeed at 10m and solar irradiance. Using [PV Lib](https://pvlib-python.readthedocs.io/en/stable/) and the [Virtual Wind Farm Model](https://github.com/renewables-ninja/vwf/tree/master), generate renewable profiles for the year and geographies of interest
+First, download the necessary input data from NASA's [MERRA-2 reanalysis](https:///gmao.gsfc.nasa.gov/reanalysis/MERRA-2/), including windspeed at 10m and solar irradiance. Using [PV Lib](https://pvlib-python.readthedocs.io/en/stable/) and the [Virtual Wind Farm Model](https://github.com/renewables-ninja/vwf/tree/master), generate renewable profiles for the year and geographies of interest. Renewable profiles can also be developed using the renewable_calculator.py script.
 
 Save the files into the running folder under /MERRA2_INPUTS/SOLAR_CF and /MERRA2_INPUTS/WIND_CF and with the necessary filenames.
 
