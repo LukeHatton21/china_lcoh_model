@@ -1,6 +1,6 @@
 # The Levelised Cost of Hydrogen (LCOH) model
 
-The LCOH Ninja is a Python project to simulate the hydrogen output and cost from green hydrogen plants powered by wind and solar, globally. The wind and solar power profiles are taken from [Renewables.ninja](https://www.renewables.ninja/) (wind) and developed using the PV Lib module [https://pvlib-python.readthedocs.io/en/stable/] (solar)
+The LCOH Ninja is a Python project to simulate the hydrogen output and cost from green hydrogen plants powered by wind and solar, globally. The wind and solar power profiles are taken from [Renewables.ninja](https://www.renewables.ninja/) (wind) and developed using the [PV Lib module](https://pvlib-python.readthedocs.io/en/stable/) (solar)
 
 
 ## Requirements
