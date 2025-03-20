@@ -1131,19 +1131,19 @@ class ResultsProcessor:
 
     
 # Inputs to the Results Processor
-land_cover = r"/Users/lukehatton/Green Hydrogen 2024/CHINA_DATA/DATA/GlobalLandCover.nc"
-colormap = r"/Users/lukehatton/Green Hydrogen 2024/CHINA_DATA/DATA/colormap.csv"
-land_mapping = "/Users/lukehatton/Green Hydrogen 2024/CHINA_DATA/DATA/LandUseCSV.csv"       
-pem_results_folder = "/Users/lukehatton/Green Hydrogen 2024/V3_PEM_COLLATED_OUTPUTS/"
-alkaline_results_folder = "/Users/lukehatton/Green Hydrogen 2024/V4_ALK_COLLATED_OUTPUTS/"
-output_folder = "/Users/lukehatton/Green Hydrogen 2024/PLOTS/"
-input_data_path = "/Users/lukehatton/Green Hydrogen 2024/DATA/"
-country_codes = r"/Users/lukehatton/Green Hydrogen 2024/CHINA_DATA/DATA/countrycodecolormap.csv"
+land_cover = r"/Users/china_lcoh_model//CHINA_DATA/DATA/GlobalLandCover.nc"
+colormap = r"/Users/china_lcoh_model//CHINA_DATA/DATA/colormap.csv"
+land_mapping = "/Users/china_lcoh_model/DATA/LandUseCSV.csv"       
+pem_results_folder = "/Users/china_lcoh_model//V3_PEM_COLLATED_OUTPUTS/"
+alkaline_results_folder = "/Users/china_lcoh_model//V4_ALK_COLLATED_OUTPUTS/"
+output_folder = "/Users/china_lcoh_model//PLOTS/"
+input_data_path = "/Users/china_lcoh_model//DATA/"
+country_codes = r"/Users/china_lcoh_model//CHINA_DATA/DATA/countrycodecolormap.csv"
 colors = ["#FFA109", "#0BADD9", "#0E60BA", "#BE0017"]
-combined_country_grids = "/Users/lukehatton/Green Hydrogen 2024/CHINA_DATA/DATA/country_grid_combined.nc"
-country_index = "/Users/lukehatton/Green Hydrogen 2024/CHINA_DATA/DATA/country_mapping.csv"
-capex_mapping = "/Users/lukehatton/Green Hydrogen 2024/CHINA_DATA/DATA/Adjusted_Country_Costs.csv"
-file_output_folder = "/Users/lukehatton/Green Hydrogen 2024/CHINA_DATA/PLOTS/"
+combined_country_grids = "/Users/china_lcoh_model/DATA/country_grid_combined.nc"
+country_index = "/Users/china_lcoh_model/DATA/country_mapping.csv"
+capex_mapping = "/Users/china_lcoh_model/DATA/Adjusted_Country_Costs.csv"
+file_output_folder = "/Users/china_lcoh_model/PLOTS/"
 
 # Call the Results Processor Model
 results_model = ResultsProcessor(pem_results_folder, alkaline_results_folder, output_folder, input_data_path,combined_country_grids, country_index, land_cover, land_mapping, colormap, colors, country_codes, capex_mapping)
@@ -1209,14 +1209,14 @@ def produce_lcoh_plots(results_model, data, name, technology, lcoh_cmap, sf_cmap
     return optimal_sf, price_btu
     
 # Produce PEM LCOH Heatmaps  
-#optimal_PEM,optimal_PEM_btu  = produce_lcoh_plots(results_model, PEM_China, "AVG", "PEM", "RdPu", "plasma", "/Users/lukehatton/Green Hydrogen 2024/CHINA_DATA/PLOTS/")
-optimal_PEM_cheapest, cheapest_PEM_btu = produce_lcoh_plots(results_model, PEM_China_cheapest, "LOW", "PEM", "RdPu", "plasma", "/Users/lukehatton/Green Hydrogen 2024/CHINA_DATA/PLOTS/", sf_additional="d")
-#optimal_PEM_highest, highest_PEM_btu = produce_lcoh_plots(results_model, PEM_China_highest, "HIGH", "PEM", "RdPu", "plasma", "/Users/lukehatton/Green Hydrogen 2024/CHINA_DATA/PLOTS/")
+#optimal_PEM,optimal_PEM_btu  = produce_lcoh_plots(results_model, PEM_China, "AVG", "PEM", "RdPu", "plasma", "/Users/china_lcoh_model/PLOTS/")
+optimal_PEM_cheapest, cheapest_PEM_btu = produce_lcoh_plots(results_model, PEM_China_cheapest, "LOW", "PEM", "RdPu", "plasma", "/Users/china_lcoh_model/PLOTS/", sf_additional="d")
+#optimal_PEM_highest, highest_PEM_btu = produce_lcoh_plots(results_model, PEM_China_highest, "HIGH", "PEM", "RdPu", "plasma", "/Users/china_lcoh_model/PLOTS/")
 
 # Produce ALK LCOH Heatmaps  
-#optimal_ALK, optimal_ALK_btu = produce_lcoh_plots(results_model, ALK_China, "AVG", "ALK", "GnBu", "plasma", "/Users/lukehatton/Green Hydrogen 2024/CHINA_DATA/PLOTS/")
-optimal_ALK_cheapest, cheapest_ALK_btu = produce_lcoh_plots(results_model, ALK_China_cheapest, "LOW", "ALK", "GnBu", "plasma", "/Users/lukehatton/Green Hydrogen 2024/CHINA_DATA/PLOTS/", "d")
-#optimal_ALK_highest, highest_ALK_btu = produce_lcoh_plots(results_model, ALK_China_highest, "HIGH", "ALK", "GnBu", "plasma", "/Users/lukehatton/Green Hydrogen 2024/CHINA_DATA/PLOTS/")
+#optimal_ALK, optimal_ALK_btu = produce_lcoh_plots(results_model, ALK_China, "AVG", "ALK", "GnBu", "plasma", "/Users/china_lcoh_model/PLOTS/")
+optimal_ALK_cheapest, cheapest_ALK_btu = produce_lcoh_plots(results_model, ALK_China_cheapest, "LOW", "ALK", "GnBu", "plasma", "/Users/china_lcoh_model/PLOTS/", "d")
+#optimal_ALK_highest, highest_ALK_btu = produce_lcoh_plots(results_model, ALK_China_highest, "HIGH", "ALK", "GnBu", "plasma", "/Users/china_lcoh_model/PLOTS/")
 
 
 
@@ -1274,7 +1274,7 @@ if tech_potential == "Y":
 
 
 ### Produce CSV files for plots
-output_folder = "/Users/lukehatton/Green Hydrogen 2024/CHINA_DATA/CSV_FILES/"
+output_folder = "/Users/china_lcoh_model/CSV_FILES/"
 
 ## Figure 2
 optimal_PEM_cheapest.to_dataframe()[['Regional_LCOH', 'hydrogen_production', 'Optimal_SF']].rename({"Regional_LCOH":"Levelised Cost of Hydrogen (USD/kg)", "hydrogen_production": "Hydrogen Production (TPA for 1MW REN)", "Optimal_SF": "Lowest Cost Solar Fraction (%)"}).to_csv(output_folder + "Figure2a.csv")
