@@ -870,17 +870,17 @@ class ResultsProcessor:
             
     
 # Inputs to the Results Processor
-land_cover = r"/Users/lukehatton/Green Hydrogen 2024/POST_PROCESS_ANALYSIS/DATA/GlobalLandCover.nc"
-colormap = r"/Users/lukehatton/Green Hydrogen 2024/POST_PROCESS_ANALYSIS/DATA/colormap.csv"
-land_mapping = "/Users/lukehatton/Green Hydrogen 2024/POST_PROCESS_ANALYSIS/DATA/LandUseCSV.csv"       
-pem_results_folder = "/Users/lukehatton/Green Hydrogen 2024/V3_PEM_COLLATED_OUTPUTS/"
-alkaline_results_folder = "/Users/lukehatton/Green Hydrogen 2024/V4_ALK_COLLATED_OUTPUTS/"
-output_folder = "/Users/lukehatton/Green Hydrogen 2024/PLOTS/"
-input_data_path = "/Users/lukehatton/Green Hydrogen 2024/DATA/"
-country_codes = r"/Users/lukehatton/Sync/OUTPUT_FOLDER/Final Analysis & Plots/Data/countrycodecolormap.csv"
+land_cover = r"/Users/china_lcoh_model//POST_PROCESS_ANALYSIS/DATA/GlobalLandCover.nc"
+colormap = r"/Users/china_lcoh_model//POST_PROCESS_ANALYSIS/DATA/colormap.csv"
+land_mapping = "/Users/china_lcoh_model//POST_PROCESS_ANALYSIS/DATA/LandUseCSV.csv"       
+pem_results_folder = "/Users/china_lcoh_model//V3_PEM_COLLATED_OUTPUTS/"
+alkaline_results_folder = "/Users/china_lcoh_model//V4_ALK_COLLATED_OUTPUTS/"
+output_folder = "/Users/china_lcoh_model//PLOTS/"
+input_data_path = "/Users/china_lcoh_model//DATA/"
+country_codes = r"/Users/china_lcoh_model//Sync/OUTPUT_FOLDER/Final Analysis & Plots/Data/countrycodecolormap.csv"
 colors = ["#FFA109", "#0BADD9", "#0E60BA", "#BE0017"]
-combined_country_grids = "/Users/lukehatton/Green Hydrogen 2024/POST_PROCESS_ANALYSIS/DATA/country_grid_combined.nc"
-country_index = "/Users/lukehatton/Green Hydrogen 2024/POST_PROCESS_ANALYSIS/DATA/country_mapping.csv"
+combined_country_grids = "/Users/china_lcoh_model//POST_PROCESS_ANALYSIS/DATA/country_grid_combined.nc"
+country_index = "/Users/china_lcoh_model//POST_PROCESS_ANALYSIS/DATA/country_mapping.csv"
 
 # Call the Results Processor Model
 results_model = ResultsProcessor(pem_results_folder, alkaline_results_folder, output_folder, input_data_path,combined_country_grids, country_index, land_cover, land_mapping, colormap, colors, country_codes)
