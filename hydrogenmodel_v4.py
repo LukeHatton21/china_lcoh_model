@@ -844,10 +844,6 @@ class HydrogenModel:
     
     
 
-
-
-#### Changes to be introduced in this version
-
 # Set up folder paths
 shared_folder_path = os.path.abspath(os.path.join(os. getcwd(), os.pardir)) + "/"
 renewable_profiles_path = shared_folder_path + "/MERRA2_INPUTS/"
@@ -863,7 +859,7 @@ start_time = time.time()
 fract_diff = 0.1 # Set to the difference in solar fraction being run 
 elec_tech = SPECIFY # Set to either PEM or Alkaline
 optimisation = "True" # Set to "True" (included only for debugging)
-elec_capex = SPECIFY # Set to specified electrolyser CAPEX (1200 USD/kW for Alkaline, 1400 USD/kW for PEM)
+elec_capex = SPECIFY # Set to specified electrolyser CAPEX 
 num_cores = 31 # Set to number of cores to use for each Hydrogen Model case
     
 # Record start time
