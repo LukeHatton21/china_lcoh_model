@@ -45,6 +45,7 @@ Third, decide on the model parameters that you wish to use, including:
  * elec_tech (PEM or Alkaline), optimisation (whether to optimise the electrolyser size)
  * elec_capex (cost of the electrolyser in USD/kW)
  * num_cores (number of computing cores to use for the parallelisation) and latitude and longitude limits for the calculation
+
 Fourth, run the hydrogen_model.py. I recommend that you save a different version for each model configuration run. Given the large volumes of data, it is very slow to run (e.g., 3 weeks for a year of data globally).
 
 ## LICENSE
