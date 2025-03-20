@@ -13,7 +13,7 @@ class All_Locations:
         self.path = path
         self.filename = filename
         if path is None:
-            self.file_list = glob.glob(r'/Users/lukehatton/Downloads/' + filename)
+            self.file_list = glob.glob(r'/Users/china_lcoh_model' + filename)
             for count, file in enumerate(self.file_list):
                 if count == 0:
                     self.ds = xr.open_dataset(file)
@@ -139,7 +139,7 @@ class RenewableCalculator:
             self.lon_min = lat_lon[2]
             self.lon_max = lat_lon[3]
         else:
-            ds = xr.open_dataset('/Users/lukehatton/Downloads/' + filename)
+            ds = xr.open_dataset('/Users/china_lcoh_model/' + filename)
             latitudes = ds.latitude.values
             longitudes = ds.longitude.values
             self.lat_min = latitudes[-1] + self.step
